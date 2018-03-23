@@ -15,6 +15,8 @@ body {
 .main-banner{
   height: 31rem;
   background: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/tortoiseshell-optics/resources/images/glasses-bg.png") center center / cover no-repeat;
+  padding-top: 1rem;
+  padding: 1rem 0;
 }
 
 header {
@@ -24,11 +26,13 @@ header {
   font-size:1rem;
   align-items: center;
   justify-content: space-between;
+
 }
 
 .logo {
     align-items: center;
     display: flex;
+    padding: 1rem 0;
 }
 
 .logo img {
@@ -48,10 +52,13 @@ nav {
     align-items: center;
     justify-content: space-between;
 }
-
+.phone-nav {
+  display: none;
+}
 nav ul li {
     display: inline;
     padding-right: 2rem;
+    justify-content: flex-end;
 }
 
 .main-advert {
@@ -59,10 +66,10 @@ nav ul li {
   background-color: white;
   margin-top: 10rem;
   margin-right: -2rem;
+  padding: 1.5rem 5rem;
 }
 
 .main-advert h1 {
-  padding: 1.5rem 5rem;
   font-weight: bold;
   font-size:2rem;
   line-height: 1.2;
@@ -124,7 +131,6 @@ nav ul li {
 footer {
   background-color: azure;
   padding: 4rem 2rem;
-  pa
   display: flex;
   align-items: center;
 }
@@ -132,4 +138,99 @@ footer img {
     height: 1.5rem;
     margin-left: 2rem;
     margin-right: 1rem;
+}
+@media only screen and (max-width:1024px){
+  header.container{
+    max-width: 100%;
+  }
+
+  .main-banner {
+    height:22rem;
+    padding-top: 0;
+  }
+  .main-advert h1 {
+    font-size:1.33rem;
+    padding: 0.75rem 0;
+  }
+  .main-advert {
+    margin-top: 5rem;
+    margin-right: 2rem;
+}
+}
+@media only screen and (max-width:650px){
+  .logo span {
+    display: none;
+  }
+}
+@media only screen and (max-width:470px) {
+  header.container{
+    max-width: 100%;
+  }
+  .reg-nav {
+    display: none;
+    padding: 1rem 0;
+  }
+  .main-banner {
+    height:17rem;
+    padding-top: 0;
+    background-position: 20%;
+  }
+  .logo span {
+    display:none;
+  }
+  .phone-nav {
+    display: flex;
+  }
+  header
+  .main-advert h1 {
+    font-size:1rem;
+    text-align: center;
+  }
+
+  .main-advert {
+    margin:9rem auto 0 auto;
+    padding: 0 1rem;
+    width: 100%;
+    text-align: center;
+ }
+
+  .contents {
+    display:flex;
+    flex-direction:column;
+    margin-top: 3.77rem;
+    justify-content: flex-start;
+  }
+  .content {
+    width: auto;
+  }
+  .title {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .content p {
+    font-size:0.77rem;
+    font-family:Helvetica;
+  }
+  footer {
+    justify-content:center;
+  }
+  footer span {
+    display: none;
+  }
+  .supporting {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    font-size:0.77rem;
+  }
+  .service {
+    margin-bottom: 1.52rem;
+    height:auto;
+    margin: 0.77rem;
+}
+  .service img {
+    width: 3.5rem;
+    margin-bottom: 1rem;
 }
